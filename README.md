@@ -2,13 +2,5 @@
 
 
 <center>
-
-## Contact Me
-
-E-posta: example@example.com
-
-LinkedIn: [example](https://www.linkedin.com/in/example)
-
-Twitter: [@example](https://twitter.com/example)
-
+ Contact Me
 </center>
