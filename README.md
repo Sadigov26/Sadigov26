@@ -2,7 +2,7 @@
 ![](https://raw.githubusercontent.com/1999AZZAR/1999AZZAR/readme/resources/img/grid-snake.svg)
 
 
-Skills:  ![Image]([data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFgAiwMBIgACEQEDEQH/xAAbAAEBAAMBAAAAAAAAAAAAAAAAAgEDBAX/xAAgEQEAAwEBAQEAAwAAAAAAAAAAAQIRAxIhMUFRBPH/2gAMAwEAAhEDEQA/AP4REAAAAAAAADQAAAAAAAAAAAtmnhr5bb/wAeDzL/cXQKiltp6MwTp2faytq8kR+Z9d1MlH4kcnMyvb4dOMWQw5a15smcY50ZtCzHyc7](https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg)
+Skills: (https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg)
 / REACT / JS / HTML / CSS / TYPESCRIPT
 # 👩‍💻 About Me :
 
