@@ -4,11 +4,11 @@
 
 
 ## Skills: 
-div style="background-color: black; display: flex;
+<div style="background-color: black; display: flex;
     align-items: center;
     justify-content: center; gap: 10px;">
 
-        <img src="https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png" alt="Image"
+<img src="https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png" alt="Image"
             style="width: 20px; height: 20px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="Image"
             style="width: 20px;" />
@@ -22,7 +22,9 @@ div style="background-color: black; display: flex;
             alt="Image" style="width: 20px; height: 20px; border-radius: 3px;" />
         <img src="https://github.com/devicons/devicon/raw/master/icons/git/git-original-wordmark.svg" alt="Image"
             style="width: 20px; height: 20px;" />
-    </div>
+
+
+</div>
 
 # 👩‍💻 About Me :
 
