@@ -15,10 +15,10 @@
     align-items: center;
     justify-content: center; ">
 
-<img src="https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png" alt="Image"
+  <img src="https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png" alt="Image"
             style="width: 40px; height: 40px; " />
 <img src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" alt="Image"
-            style="width: 40px; height: 40px; " />  
+            style="width: 40px; height: 40px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="Image"
            style="width: 40px; height: 40px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg" alt="Image"
