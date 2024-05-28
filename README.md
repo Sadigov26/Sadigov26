@@ -4,7 +4,12 @@
 <div align="center">
   <h2>Contact Me</h2>
   
-  <p>E-posta: example@example.com</p>
-  <p>LinkedIn: [example](https://www.linkedin.com/in/example)</p>
-  <p>Twitter: [@example](https://twitter.com/example)</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <style>
+    .email { fill: #ffffff; font-family: Arial, sans-serif; font-size: 16px; }
+  </style>
+  <rect width="200" height="200" fill="#6d28d9"/>
+  <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" class="email">sadigovkamil2@gmail.com</text>
+</svg>
+
 </div>
