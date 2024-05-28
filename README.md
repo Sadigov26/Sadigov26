@@ -33,6 +33,10 @@
             alt="Image" style="width: 40px; height: 40px; border-radius: 3px;" />
         <img src="https://github.com/devicons/devicon/raw/master/icons/git/git-original-wordmark.svg" alt="Image"
             style="width: 40px; height: 40px;" />
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-sass-226054.png?f=webp" alt="Image"
+    style="width: 40px; height: 40px; " />
+<img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" alt="Image"
+    style="width: 40px; height: 40px; " />
 </div>
 
 
