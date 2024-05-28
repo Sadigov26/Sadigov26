@@ -21,8 +21,9 @@
            style="width: 40px; height: 40px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg" alt="Image"
             style="width: 40px; height: 40px; " />
-<img src="https://w7.pngwing.com/pngs/224/77/png-transparent-website-web-internet-css-style-css3-technology-social-media-logos-i-flat-colorful-icon.png" alt="Image"
+        <img src="https://w7.pngwing.com/pngs/224/77/png-transparent-website-web-internet-css-style-css3-technology-social-media-logos-i-flat-colorful-icon.png" alt="Image"
             style="width: 40px; height: 40px; " />
+            
         <img src="https://github.com/devicons/devicon/raw/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Image"
             style="width: 40px; height: 40px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/bootstrap/bootstrap-original-wordmark.svg"
