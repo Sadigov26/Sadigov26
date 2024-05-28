@@ -11,17 +11,17 @@
 <img src="https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png" alt="Image"
             style="width: 40px; height: 40px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="Image"
-            style="width: 20px;" />
+           style="width: 40px; height: 40px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg" alt="Image"
-            style="width: 20px; height: 20px;" />
+            style="width: 40px; height: 40px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Image"
-            style="width: 20px; height: 20px;" />
+            style="width: 40px; height: 40px; " />
         <img src="https://github.com/devicons/devicon/raw/master/icons/bootstrap/bootstrap-original-wordmark.svg"
-            alt="Image" style="width: 20px; height: 20px;" />
+            alt="Image" style="width: 40px; height: 40px; " />
         <img src="https://cdn.iconscout.com/icon/free/png-256/free-typescript-3521774-2945272.png?f=webp"
-            alt="Image" style="width: 20px; height: 20px; border-radius: 3px;" />
+            alt="Image" style="width: 40px; height: 40px; border-radius: 3px;" />
         <img src="https://github.com/devicons/devicon/raw/master/icons/git/git-original-wordmark.svg" alt="Image"
-            style="width: 20px; height: 20px;" />
+            style="width: 40px; height: 40px;" />
 
 
 </div>
