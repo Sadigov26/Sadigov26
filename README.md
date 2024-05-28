@@ -6,7 +6,7 @@
 ## Skills: 
 <div style="background-color: black; display: flex;
     align-items: center;
-    justify-content: center; gap: 10px;">
+    justify-content: center; gap: 100px;">
 
 <img src="https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png" alt="Image"
             style="width: 20px; height: 20px; " />
