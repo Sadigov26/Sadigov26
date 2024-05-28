@@ -7,7 +7,7 @@
 <div  >
 
   <img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="Image" style="width: 20px;" />
-  <img src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg" alt="Image" style="width: 20px; height: auto;"  />
+  <img src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg" alt="Image" style="width: 20px; height: 20px;"  />
   <img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="Image" style="width: 3%;" />
   <img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="Image" style="width: 3%;" />
 
