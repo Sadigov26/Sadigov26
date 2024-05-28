@@ -2,7 +2,7 @@
 ![](https://raw.githubusercontent.com/1999AZZAR/1999AZZAR/readme/resources/img/grid-snake.svg)
 
 
-Skills: (https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg)
+Skills: [<img src='[https://img.shields.io/badge/-Sadigov-blue?style=flat&logo=Telegram&logoColor=white](https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg)' alt='Telegram' height='20'>]
 / REACT / JS / HTML / CSS / TYPESCRIPT
 # 👩‍💻 About Me :
 
