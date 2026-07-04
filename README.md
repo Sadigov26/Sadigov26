@@ -9,7 +9,7 @@
 - 🔭 I’m working as a Software Engineer and contributing to frontend for building web applications.
 - 🌱  Exploring Technical Content Writing.
 - ⚡  In my free time, I solve problems on GeeksforGeeks and read tech articles.
-- 📫 How to reach me: [<img src='https://img.shields.io/badge/-Sadigov-blue?style=flat&logo=Telegram&logoColor=white' alt='Telegram' height='20'>](https://t.me/Sadigov26)  [<img src='https://img.shields.io/badge/-sadigovkamil2%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white' alt='Gmail' height='20'>](mailto:sadigovkamil2@gmail.com) 
+- 📫 How to reach me: [<img src='https://img.shields.io/badge/-Sadigov-blue?style=flat&logo=Telegram&logoColor=white' alt='Telegram' height='20'>](https://t.me/Sadigov26)  [<img src='https://img.shields.io/badge/-sadigovkamil2%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white' alt='Gmail' height='20'>](mailto:sadigov2500@gmail.com) 
 # 🛠️ Skills :
 <div style="background-color: black; display: flex;
     align-items: center;
