@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate random contribution grid
+      - name: Generate Snake
         run: |
           mkdir -p dist
 
@@ -24,135 +24,90 @@ jobs:
           import random
           import datetime
 
-          # Grid ölçüsü
           COLS = 52
           ROWS = 7
+          FILL = 0.55
 
-          # Təxminən 70% doluluq
-          FILL_PERCENT = 0.70
+          START_DATE = datetime.date(2026, 7, 12)
+          TODAY = datetime.date.today()
 
-          # Hər gün pattern dəyişsin
-          seed = int(datetime.date.today().strftime("%Y%m%d"))
-          random.seed(seed)
+          random.seed(int(TODAY.strftime("%Y%m%d")))
 
-          # GitHub contribution rəngləri
-          LIGHT_COLORS = [
-              "#9be9a8",
-              "#40c463",
-              "#30a14e",
-              "#216e39"
-          ]
-
-          DARK_COLORS = [
+          COLORS = [
               "#0e4429",
               "#006d32",
               "#26a641",
               "#39d353"
           ]
 
-          def generate_svg(dark=False):
-              colors = DARK_COLORS if dark else LIGHT_COLORS
+          EMPTY = "#161b22"
 
-              width = COLS * 18
-              height = ROWS * 18
+          def make_svg():
+              w = COLS * 18
+              h = ROWS * 18
 
-              svg = []
+              svg = [
+                  f'<svg xmlns="http://www.w3.org/2000/svg" '
+                  f'width="{w}" height="{h}" viewBox="0 0 {w} {h}">',
+                  '<rect width="100%" height="100%" fill="#0d1117"/>'
+              ]
 
-              svg.append(f'''<svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="{width}"
-              height="{height}"
-              viewBox="0 0 {width} {height}">
+              # Grid
+              for col in range(COLS):
+                  for row in range(ROWS):
 
-              <rect width="100%" height="100%" fill="transparent"/>
-
-              <style>
-                .cell {{
-                  rx: 3;
-                  ry: 3;
-                }}
-              </style>
-              ''')
-
-              # Random contribution cells
-              for row in range(ROWS):
-                  for col in range(COLS):
+                      date = (
+                          TODAY
+                          - datetime.timedelta(days=TODAY.weekday() + 1)
+                          - datetime.timedelta(weeks=COLS - col - 1)
+                          + datetime.timedelta(days=row)
+                      )
 
                       x = col * 18 + 2
                       y = row * 18 + 2
 
-                      if random.random() < FILL_PERCENT:
-
-                          # Random intensity
-                          color = random.choice(colors)
-
-                          svg.append(
-                              f'<rect class="cell" '
-                              f'x="{x}" y="{y}" '
-                              f'width="14" height="14" '
-                              f'fill="{color}"/>'
-                          )
-
+                      if START_DATE <= date <= TODAY and random.random() < FILL:
+                          color = random.choice(COLORS)
                       else:
-                          empty = "#161b22" if dark else "#ebedf0"
+                          color = EMPTY
 
-                          svg.append(
-                              f'<rect class="cell" '
-                              f'x="{x}" y="{y}" '
-                              f'width="14" height="14" '
-                              f'fill="{empty}"/>'
-                          )
+                      svg.append(
+                          f'<rect x="{x}" y="{y}" width="14" height="14" '
+                          f'rx="3" fill="{color}"/>'
+                      )
 
               # Snake path
               points = []
 
               for row in range(ROWS):
-                  if row % 2 == 0:
-                      cols = range(COLS)
-                  else:
-                      cols = range(COLS - 1, -1, -1)
+                  cols = range(COLS) if row % 2 == 0 else range(COLS - 1, -1, -1)
 
                   for col in cols:
-                      x = col * 18 + 9
-                      y = row * 18 + 9
-                      points.append((x, y))
+                      points.append((col * 18 + 9, row * 18 + 9))
 
               path = f"M {points[0][0]} {points[0][1]}"
 
               for x, y in points[1:]:
                   path += f" L {x} {y}"
 
-              # Invisible animation path
-              svg.append(f'''
-              <path
-                id="snakePath"
-                d="{path}"
-                fill="none"
-                stroke="none"/>
-              ''')
+              svg.append(
+                  f'<path id="snake" d="{path}" fill="none" stroke="none"/>'
+              )
 
-              # Snake segments
-              snake_color = "#bc13fe" if dark else "#8e0ca8"
-
+              # Snake
               for i in range(5):
-                  delay = -(i * 0.18)
-
                   svg.append(f'''
-                  <rect
-                    width="12"
-                    height="12"
-                    rx="3"
-                    fill="{snake_color}"
-                    opacity="{1 - i * 0.12}">
-
+                  <rect width="11" height="11"
+                        rx="3"
+                        fill="#bc13fe"
+                        opacity="{1 - i * 0.12}">
                     <animateMotion
-                      dur="10s"
-                      begin="{delay}s"
+                      dur="12s"
+                      begin="{-i * 0.18}s"
                       repeatCount="indefinite"
                       rotate="auto">
-                      <mpath href="#snakePath"/>
+                      <mpath href="#snake"/>
                     </animateMotion>
-
                   </rect>
                   ''')
 
@@ -160,26 +115,23 @@ jobs:
 
               return "\n".join(svg)
 
-          # Light
           with open(
               "dist/github-contribution-grid-snake.svg",
-              "w",
-              encoding="utf-8"
+              "w"
           ) as f:
-              f.write(generate_svg(False))
+              f.write(make_svg())
 
-          # Dark
           with open(
               "dist/github-contribution-grid-snake-dark.svg",
-              "w",
-              encoding="utf-8"
+              "w"
           ) as f:
-              f.write(generate_svg(True))
+              f.write(make_svg())
 
-          print("Random 70% contribution grid generated!")
+          print("Snake generated!")
+
           PY
 
-      - name: Push output to output branch
+      - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
