@@ -15,7 +15,6 @@
   <img src="https://raw.githubusercontent.com/Sadigov26/Sadigov26/output/github-contribution-grid-snake.svg" alt="snake animation" width="100%" />
 </p>
 
-> Note: the snake above only renders after the included `snake.yml` GitHub Actions workflow has run at least once in the `Sadigov26/Sadigov26` repository. See the setup note at the bottom of this file.
 
 ---
 
@@ -105,13 +104,3 @@
 <p align="center">
   <i>Turning ideas into working code, one project at a time.</i>
 </p>
-
-<!--
-SETUP NOTE — Snake animation:
-1. Create a repo named exactly "Sadigov26" (matches your GitHub username) if it doesn't exist yet.
-2. Add the included snake.yml file at: .github/workflows/snake.yml
-3. Go to the repo's Actions tab and manually run the "Generate Snake Animation" workflow once.
-4. It will push an SVG to an "output" branch. The image link above already points there,
-   so once the workflow succeeds, the snake will appear automatically.
-5. It also re-runs daily on schedule and on every push to main, so it stays up to date.
--->
