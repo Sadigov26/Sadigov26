@@ -1,28 +1,185 @@
-name: Generate Snake Animation
+name: Generate Random Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *" # hər gün gecə saat 00:00-da
-  workflow_dispatch: {} # istəyəndə əl ilə də işə salına bilər
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
   push:
     branches:
-      - main
+      - Main
 
 jobs:
   generate:
     permissions:
       contents: write
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        id: snake-gif
-        with:
-          github_user_name: Sadigov26
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: push output to output branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate random contribution grid
+        run: |
+          mkdir -p dist
+
+          python3 <<'PY'
+          import random
+          import datetime
+
+          # Grid ölçüsü
+          COLS = 52
+          ROWS = 7
+
+          # Təxminən 70% doluluq
+          FILL_PERCENT = 0.70
+
+          # Hər gün pattern dəyişsin
+          seed = int(datetime.date.today().strftime("%Y%m%d"))
+          random.seed(seed)
+
+          # GitHub contribution rəngləri
+          LIGHT_COLORS = [
+              "#9be9a8",
+              "#40c463",
+              "#30a14e",
+              "#216e39"
+          ]
+
+          DARK_COLORS = [
+              "#0e4429",
+              "#006d32",
+              "#26a641",
+              "#39d353"
+          ]
+
+          def generate_svg(dark=False):
+              colors = DARK_COLORS if dark else LIGHT_COLORS
+
+              width = COLS * 18
+              height = ROWS * 18
+
+              svg = []
+
+              svg.append(f'''<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="{width}"
+              height="{height}"
+              viewBox="0 0 {width} {height}">
+
+              <rect width="100%" height="100%" fill="transparent"/>
+
+              <style>
+                .cell {{
+                  rx: 3;
+                  ry: 3;
+                }}
+              </style>
+              ''')
+
+              # Random contribution cells
+              for row in range(ROWS):
+                  for col in range(COLS):
+
+                      x = col * 18 + 2
+                      y = row * 18 + 2
+
+                      if random.random() < FILL_PERCENT:
+
+                          # Random intensity
+                          color = random.choice(colors)
+
+                          svg.append(
+                              f'<rect class="cell" '
+                              f'x="{x}" y="{y}" '
+                              f'width="14" height="14" '
+                              f'fill="{color}"/>'
+                          )
+
+                      else:
+                          empty = "#161b22" if dark else "#ebedf0"
+
+                          svg.append(
+                              f'<rect class="cell" '
+                              f'x="{x}" y="{y}" '
+                              f'width="14" height="14" '
+                              f'fill="{empty}"/>'
+                          )
+
+              # Snake path
+              points = []
+
+              for row in range(ROWS):
+                  if row % 2 == 0:
+                      cols = range(COLS)
+                  else:
+                      cols = range(COLS - 1, -1, -1)
+
+                  for col in cols:
+                      x = col * 18 + 9
+                      y = row * 18 + 9
+                      points.append((x, y))
+
+              path = f"M {points[0][0]} {points[0][1]}"
+
+              for x, y in points[1:]:
+                  path += f" L {x} {y}"
+
+              # Invisible animation path
+              svg.append(f'''
+              <path
+                id="snakePath"
+                d="{path}"
+                fill="none"
+                stroke="none"/>
+              ''')
+
+              # Snake segments
+              snake_color = "#bc13fe" if dark else "#8e0ca8"
+
+              for i in range(5):
+                  delay = -(i * 0.18)
+
+                  svg.append(f'''
+                  <rect
+                    width="12"
+                    height="12"
+                    rx="3"
+                    fill="{snake_color}"
+                    opacity="{1 - i * 0.12}">
+
+                    <animateMotion
+                      dur="10s"
+                      begin="{delay}s"
+                      repeatCount="indefinite"
+                      rotate="auto">
+                      <mpath href="#snakePath"/>
+                    </animateMotion>
+
+                  </rect>
+                  ''')
+
+              svg.append("</svg>")
+
+              return "\n".join(svg)
+
+          # Light
+          with open(
+              "dist/github-contribution-grid-snake.svg",
+              "w",
+              encoding="utf-8"
+          ) as f:
+              f.write(generate_svg(False))
+
+          # Dark
+          with open(
+              "dist/github-contribution-grid-snake-dark.svg",
+              "w",
+              encoding="utf-8"
+          ) as f:
+              f.write(generate_svg(True))
+
+          print("Random 70% contribution grid generated!")
+          PY
+
+      - name: Push output to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
