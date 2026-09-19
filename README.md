@@ -1,9 +1,8 @@
 <h1 align="center">Hi, I'm Kamil 👋</h1>
-
 <h3 align="center">Freelance Full-Stack Developer based in Azerbaijan 🇦🇿</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=61DAFB&center=true&vCenter=true&width=600&lines=React+%2B+Node.js+%2B+MongoDB+Developer;Building+React+Native+apps+with+Expo;Freelancer+%7C+Problem+Solver+%7C+Builder;Turning+ideas+into+production-ready+code" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=20&amp;duration=3000&amp;pause=1000&amp;color=61DAFB&amp;center=true&amp;vCenter=true&amp;width=600&amp;lines=React+%2B+Node.js+%2B+MongoDB+Developer;Building+React+Native+apps+with+Expo;Freelancer+%7C+Problem+Solver+%7C+Builder;Turning+ideas+into+production-ready+code" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -16,6 +15,7 @@
   <img src="https://raw.githubusercontent.com/Sadigov26/Sadigov26/output/github-contribution-grid-snake.svg" alt="snake animation" width="100%" />
 </p>
 
+> Note: the snake above only renders after the included `snake.yml` GitHub Actions workflow has run at least once in the `Sadigov26/Sadigov26` repository. See the setup note at the bottom of this file.
 
 ---
 
